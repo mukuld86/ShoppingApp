@@ -1,7 +1,10 @@
+using ShoppingDAL;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IShoppingRepository, ShoppingRepository>();
 
 var app = builder.Build();
 
